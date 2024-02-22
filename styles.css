@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "spotify";
+  src: url("font/Gotham-Medium\ 500.ttf");
+}
+
+body {
+  color: #ffffff;
+  background-color: #121212;
+  margin: 0;
+  font-family: "spotify", sans-serif;
+  font-size: 0.9em;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+header {
+  color: #ffffff;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 200px 20px 200px;
+  align-items: center;
+}
+
+header img {
+  max-height: 40px;
+}
+
+.header-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.header-menu a:hover {
+  color: #1ed760;
+  text-decoration: none;
+}
+
+.info {
+  padding-top: 0;
+  background-position: right top, center -25%;
+  background-image: url(images/background-albums.png),
+    linear-gradient(0deg, rgba(255, 210, 215, 0) 70%, #ffd2d7 120%);
+  background-size: min(60% 800px), 100% 40%;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.info-text {
+  margin: 40px 725px 10px 200px;
+}
+
+.info-text p {
+  padding-top: 7px;
+}
+
+.content {
+  margin: 75px 200px;
+  text-align: center;
+}
+
+button {
+  font-family: "spotify", sans-serif;
+  font-size: 1.05em;
+  border-radius: 40px;
+  padding: 15px 30px 15px 30px;
+  border: none;
+  margin-top: 25px;
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conditions a {
+  font-size: 0.75em;
+  padding-top: 30px;
+  color: #ffffff;
+}
+
+.table-plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.table-info {
+  font-size: 1.25em;
+  max-width: 50%;
+}
+
+table {
+  font-size: 0.9em;
+  max-width: 41%;
+  text-align: left;
+  border-collapse: collapse;
+  background-image: linear-gradient(180deg, #ad2489 20%, #2c4575 100%);
+  margin-bottom: 75px;
+}
+
+th {
+  height: 80px;
+  border-bottom: 1px solid #ffffff;
+  padding: 15px;
+  background-color: #121212;
+}
+
+td {
+  text-decoration: 1px dashed #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: #121212;
+  padding: 20px 10px;
+}
+
+th:first-child {
+  vertical-align: bottom;
+}
+td:first-child {
+  width: 42%;
+}
+
+th:nth-child(2) {
+  background-color: #ffffff;
+  color: #000000;
+  width: 29%;
+}
+td:nth-child(2) {
+  width: 29%;
+  text-align: center;
+}
+
+th:last-child {
+  background-color: transparent;
+  width: 29%;
+}
+td:last-child {
+  background-color: transparent;
+  width: 29%;
+  text-align: center;
+}
+
+.payment-methods {
+  margin: 40px;
+}
+.payment-methods img {
+  border-radius: 5px;
+  padding: 0px 3px;
+  max-height: 35px;
+  background-color: #ffffff;
+}
+
+.button-individual {
+  background-color: #ffd2d7;
+  color: #000000;
+}
+
+.button-see-plans {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.card {
+  border: 5px solid #ffd2d7;
+  border-radius: 1em;
+}
+
+.plans-info {
+  grid-area: plans-info;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.border-gradient {
+  background: linear-gradient(#121212, #121212) padding-box,
+    linear-gradient(to right, #b00d6e, #084791) border-box;
+  border: 4px solid transparent;
+}
+
+.individual {
+  grid-area: individual;
+}
+.individual button {
+  background-color: #ffd2d7;
+}
+
+.students {
+  grid-area: students;
+  border-color: #c4b1d4;
+}
+
+.students button {
+  background-color: #c4b1d4;
+}
+.duo {
+  grid-area: duo;
+  border-color: #ffc862;
+}
+.duo button {
+  background-color: #ffc862;
+}
+
+.familiar {
+  grid-area: familiar;
+  border-color: #a5bbd1;
+}
+
+.familiar button {
+  background-color: #a5bbd1;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 50px;
+  grid-template-areas:
+    "plans-info plans-info plans-info"
+    "individual students duo"
+    ". familiar .";
+}
