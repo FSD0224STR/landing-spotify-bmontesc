@@ -8,12 +8,12 @@ body {
   background-color: #121212;
   margin: 0;
   font-family: "spotify", sans-serif;
-  font-size: 0.9em;
+  font-size: 1.1rem;
 }
 
 h1 {
-  font-size: 3em;
-  margin-bottom: 0;
+  font-size: 3.1rem;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -21,7 +21,13 @@ h2 {
   margin-bottom: 0;
 }
 
-h4 {
+h3 {
+  font-size: 1.5rem;
+}
+
+h3,
+h4,
+h6 {
   margin: 0;
 }
 
@@ -49,45 +55,60 @@ header img {
   text-decoration: none;
 }
 
-.info {
-  padding-top: 0;
+.article {
   background-position: right top, center -25%;
   background-image: url(images/background-albums.png),
     linear-gradient(0deg, rgba(255, 210, 215, 0) 70%, #ffd2d7 120%);
   background-size: min(60% 800px), 100% 40%;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  max-width: 1270px;
+  width: 100%;
+  /* margin: 40px 50% 10px 20%; */
 }
 
 .info-text {
-  margin: 40px 725px 10px 200px;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  padding: 3.5rem 0rem;
 }
 
 .info-text p {
-  padding-top: 7px;
+  margin-top: 5px;
 }
 
 .content {
-  margin: 75px 200px;
+  max-width: 1270px;
   text-align: center;
+  margin: auto;
 }
 
 button {
   font-family: "spotify", sans-serif;
-  font-size: 1.05em;
+  font-size: 1.1rem;
   border-radius: 40px;
-  padding: 15px 30px 15px 30px;
+  padding: 15px 25px 15px 25px;
   border: none;
-  margin-top: 25px;
+  margin: 10px 1.5px;
 }
 
 .buttons-div {
   display: flex;
-  justify-content: space-between;
 }
 
-.conditions a {
-  font-size: 0.75em;
+.conditions a,
+.card-footer a {
+  font-size: 0.7rem;
   padding-top: 30px;
   color: #ffffff;
 }
@@ -105,8 +126,8 @@ button {
 }
 
 table {
-  font-size: 0.9em;
-  max-width: 41%;
+  font-size: 1.025rem;
+  max-width: 500px;
   text-align: left;
   border-collapse: collapse;
   background-image: linear-gradient(180deg, #ad2489 20%, #2c4575 100%);
@@ -121,7 +142,6 @@ th {
 }
 
 td {
-  text-decoration: 1px dashed #ffffff;
   border-bottom: 1px solid #ffffff;
   background-color: #121212;
   padding: 20px 10px;
@@ -132,6 +152,10 @@ th:first-child {
 }
 td:first-child {
   width: 42%;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 0.25rem;
+  line-height: 1.5;
 }
 
 th:nth-child(2) {
@@ -196,6 +220,43 @@ td:last-child {
   border: 4px solid transparent;
 }
 
+.card {
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body ul {
+  text-align: left;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-footer p {
+  font-size: 0.7rem;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
 .individual {
   grid-area: individual;
 }
@@ -232,10 +293,34 @@ td:last-child {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 1fr;
-  grid-column-gap: 25px;
-  grid-row-gap: 50px;
+  grid-column-gap: 40px;
+  grid-row-gap: 60px;
   grid-template-areas:
     "plans-info plans-info plans-info"
     "individual students duo"
     ". familiar .";
+}
+
+.qa {
+  margin-top: 150px;
+}
+
+.qa-dropdowns {
+  text-align: left;
+}
+
+.qa-dropdowns details {
+  padding: 20px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+.qa-dropdowns details:last-child {
+  padding: 20px;
+  border-bottom: none;
+  margin-bottom: 100px;
+}
+
+footer {
+  background-color: #000000;
+  height: 200px;
 }
